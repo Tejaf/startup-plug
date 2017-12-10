@@ -3,14 +3,13 @@ body {
     width: 100%;
     height: 100vh;
     font-family: 'Open Sans', sans-serif;
-    font-family: 'Lato', sans-serif;
     color: #fff;
     font-size: 16px;
    
 }
 
 html {
-    background: #333;
+    background: #444;
 }
 
 /* display */
@@ -30,7 +29,7 @@ html {
     z-index: 1;
     height: 100vh;
     width: 100%;
-    background-image: url("https://static.pexels.com/photos/355952/pexels-photo-355952.jpeg");
+    background-image: url(../img/cover.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 0 70px;
@@ -47,7 +46,7 @@ html {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(20, 20, 20, 0.7);
+    background: rgba(4, 4, 4, 0.8   )
 }
 
 
@@ -55,7 +54,6 @@ html {
 
 .header,
 .content {
-    width: 80%;
     margin: 0 auto;
 }
 
@@ -63,9 +61,10 @@ html {
 .logo {
     margin-right: auto;
     font-size: 1.5rem;
-    color: #ddd;
+    color: #eee;
     letter-spacing: -1;
     font-weight: 700;
+    align-self: center
 }
 
 .logo span {
@@ -79,16 +78,15 @@ html {
 /* content */
 
 .content {
-    justify-content: space-between;
-    padding-top: 70px;
-   
+    margin-top: 100px;
 }
 .content--btn {
     display: none;
 }
 
 .about{
-    width: 50%;
+    width: 60%;
+    margin-right: 60px;
 }
 
 .about h1 {
@@ -97,8 +95,9 @@ html {
     font-size: 2rem;
 }
 
-.about h1 b {
-        font-weight: 700;
+.about h1 strong {
+        font-weight: 900;
+        color: fff;
 }
 
 .about div span {
@@ -108,9 +107,8 @@ html {
 .about div p {
     margin-bottom: 30px;
     margin-left: 10px;
-    letter-spacing: 0.7;
     color: #ddd;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .form {
@@ -133,72 +131,102 @@ html {
     width: 80%;
     margin: 0 auto;
     margin-bottom: 30px;
-    padding: 10px;
+    padding: 15px;
     border: none;
     color: #000;
+    font-size: 1rem
+}
+
+.form input[type=text] {
+    text-transform: capitalize;
 }
 
 button{
     background: #ff8a4a;
     color: #fff;
     text-transform: uppercase;
-    padding: 20px 30px;
+    padding: 10px 40px;
     display: block;
-    border-radius: 2px;
+    border-radius: 5px;
     border: none;
     outline: none;
     text-align: center;
     margin: 0 auto;
-    font-weight: 800;
-    font-size: 0.8rem;
+    margin-top: 40px;
+    font-size: 1rem;
     transition: all .6s;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.99)
 }
 
 button:hover {
     cursor: pointer;
-    opacity: 0.8;
+    box-shadow: none;
 }
 
 /* customize font awesome  */
 
 .icon-bg {
-    color: #ff8a4a;
+    color: #444;
 }
 
 .fa-check {
     color: #fff;
 }
 
-.smedia{
-    border-radius: 50%;
-    margin-left: 10px;
+.nav--items {
+    padding: 0;
+    text-align: center
 }
-    
+
+.nav--item {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 50px;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.nav--item i {
+    padding: 12px;
+    border-radius: 50%;
+    margin: 0;
+    text-align: center;
+}
+
+.nav--item .fa-facebook {
+    padding: 12px 16px;
+}
+.nav--item .fa-linkedin {
+    padding: 12px 14px;
+}
+
 .fa-facebook,
 .fa-twitter,
 .fa-linkedin{
 	color: #FFFFFF;
-    padding: 8px 10px;
     background: rgba(0, 0, 0, 0.3);
     transition: all .4s;
-}
-
-.fa-facebook:hover,
-.fa-twitter:hover,
-.fa-linkedin:hover {
-    background: #ff8a4a;
     cursor: pointer;
 }
 
-
-@media (max-width: 1089px) {
-    .about {
-        width: 70%;
-        padding-right: 30px;
-    }
+.fa-facebook:hover {
+    background-color:#3B5998;
+}
+.fa-twitter:hover {
+    background-color:#33ccff;
 }
 
+.fa-linkedin:hover {
+    background-color:#007bb7;
+}
+
+
 @media (max-width: 998px) {
+    .container::after {
+        height: 200vh;
+        overflow: hidden
+    }
 
     .header,
     .content {
@@ -220,13 +248,14 @@ button:hover {
     /* navigation */
     .nav--items {
         margin-bottom: 20px;
-        font-size: 12px;
+        font-size: 11px;
     }
     .logo {
         font-size: 20px;
     }
     /* content */
     .content {
+        margin-top: 50px;
         flex-direction: column;
     }
     .content--btn {
@@ -236,30 +265,29 @@ button:hover {
     .about {
         width: 100%;
         height: 100vh;
+        font-size: 12px;
     }
     .about h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         text-align: center;
     }
-    .about p {
-        text-align: justify;
-    }
-    .space {
-        margin-bottom: 40px;
-    }
+
    
     .form {
         width: 100%;
-        height: 100vh;
         border: 0;
-        padding-top: 50px;
+        background: transparent
     }
 
-    .fa-facebook,
-    .fa-twitter,
+    .fa-facebook {
+        background-color:#3B5998;
+    }
+    .fa-twitter {
+        background-color:#33ccff;
+    }
+
     .fa-linkedin {
-        background: #ff8a4a;
+        background-color:#007bb7;
     }
-
 
 }
