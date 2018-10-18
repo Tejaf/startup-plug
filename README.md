@@ -1,3 +1,3 @@
 
 # Intro
-Web Development - No functionality added to it, just html/css.
+Web Development - No functionality, just html/css.
